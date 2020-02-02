@@ -25,7 +25,7 @@ btn.on("click", function(){
     var sel_dt = dt.property("value");
 
     // clear table
-    tbody.html("")
+    tbody.html("");
 
     // variable to show filtered data only
     var filteredData = tableData.filter(dataLoop => dataLoop.datetime === sel_dt);
@@ -35,7 +35,6 @@ btn.on("click", function(){
         var row = tbody.append("tr");
         // data in row
         Object.entries(dataLoop).forEach(function([key,value]){
-            console.log(key,value);
             var cell = row.append("td").text(value);
         });
     });
